@@ -1,0 +1,5 @@
+.News-container {
+  margin: 20px 10px;
+  height: 80vh;
+  overflow-y: auto;
+}
