@@ -1,10 +1,10 @@
-import saveArticle from "../constants/actionType";
+import saveArticle from "../actions/actionType";
 
 const initialState = {
   articles: [],
 };
 
-function rootReducer(state = initialState, action) {
+function news(state = initialState, action) {
   switch (action.type) {
     case saveArticle:
       return {
@@ -16,4 +16,4 @@ function rootReducer(state = initialState, action) {
   }
 }
 
-export default rootReducer;
+export default news;

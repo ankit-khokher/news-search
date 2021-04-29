@@ -1,7 +1,7 @@
-import AppHeader from "./components/Header/AppHeader";
-import AppFooter from "./components/Footer/AppFooter";
+import AppHeader from "./components/common/Header/AppHeader";
+import AppFooter from "./components/common/Footer/AppFooter";
 import "./App.css";
-import NewsComponent from "./components/NewsComponent/NewsComponent";
+import NewsComponent from "./components/news/NewsComponent/NewsComponent";
 
 function App() {
   return (
