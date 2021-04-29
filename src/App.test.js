@@ -1,8 +1,15 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import App from "./App";
+import store from "../src/state/store";
+import { Provider } from "react-redux";
+import { shallow } from "enzyme";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("AppComponent", () => {
+  it("should render the app component", () => {
+    const component = shallow(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
+    expect(component.find(App).length).toBe(1);
+  });
 });
