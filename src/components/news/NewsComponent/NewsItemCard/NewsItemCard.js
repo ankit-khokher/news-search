@@ -6,8 +6,9 @@ const NewsItemCard = (props) => {
       {props.articles.map((article, index) => (
         <div className="item" key={index}>
           <h2 className="title">{article.title}</h2>
-          <p className="content">{article.content.substring(0, 150)}</p>
           <label className="author"> {article.author}</label>
+          <p className="content">{article.content.substring(0, 150)}</p>
+          <a href={article.url}>{article.url}</a>
         </div>
       ))}
     </div>

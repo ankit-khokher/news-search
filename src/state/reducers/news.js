@@ -1,4 +1,4 @@
-import saveArticle from "../actions/actionType";
+import SAVE_ARTICLE from "../actions/actionType";
 
 const initialState = {
   articles: [],
@@ -6,7 +6,7 @@ const initialState = {
 
 function news(state = initialState, action) {
   switch (action.type) {
-    case saveArticle:
+    case SAVE_ARTICLE:
       return {
         ...state,
         articles: action.payload,
