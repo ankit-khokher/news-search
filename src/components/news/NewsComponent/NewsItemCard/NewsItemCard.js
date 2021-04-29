@@ -2,12 +2,12 @@ import "./NewsItemCard.css";
 
 const NewsItemCard = (props) => {
   return (
-    <div className="News-article">
+    <div className="News-wrapper">
       {props.articles.map((article, index) => (
-        <div className="item" key={index}>
-          <h2 className="title">{article.title}</h2>
-          <label className="author"> {article.author}</label>
-          <p className="content">{article.content.substring(0, 150)}</p>
+        <div className="News-item" key={index}>
+          <h2 className="Title">{article.title}</h2>
+          <label className="Author"> {article.author}</label>
+          <p className="Content">{article.content.substring(0, 150)}</p>
           <a href={article.url}>{article.url}</a>
         </div>
       ))}
