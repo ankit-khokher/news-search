@@ -6,8 +6,9 @@ const SearchComponent = (props) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <div className="Search-input">
+    <div className="Search-wrapper">
       <input
+        className="Search-input"
         value={searchQuery}
         name="searchQuery"
         type="text"
@@ -15,6 +16,7 @@ const SearchComponent = (props) => {
         onChange={(e) => setSearchQuery(e.target.value)}
       />
       <button
+        className="Search-button"
         onClick={() => {
           onSearchClick(searchQuery);
           setSearchQuery("");

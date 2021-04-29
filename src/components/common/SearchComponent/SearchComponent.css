@@ -1,2 +1,15 @@
+.Search-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
 .Search-input {
+  height: 25px;
+}
+
+.Search-button {
+  background: none;
+  border: 1px black solid;
+  height: 30px;
+  margin-left: 20px;
 }
