@@ -17,6 +17,7 @@ const SearchComponent = (props) => {
       />
       <button
         className="Search-button"
+        disabled={!searchQuery || (searchQuery && searchQuery.trim() === "")}
         onClick={() => {
           onSearchClick(searchQuery);
           setSearchQuery("");
