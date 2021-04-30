@@ -1,5 +1,10 @@
-import { SAVE_ARTICLE } from "./actionType";
+import SAVE_NEWS from "./actionType";
 
-export function saveArticle(payload) {
-  return { type: SAVE_ARTICLE, payload };
-}
+const saveNews = (articles) => {
+  return {
+    type: SAVE_NEWS,
+    payload: articles,
+  };
+};
+
+export default saveNews;

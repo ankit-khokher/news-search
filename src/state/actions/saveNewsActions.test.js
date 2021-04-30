@@ -1,15 +1,15 @@
 import mockArticles from "../reducers/news.test";
-import { saveArticle } from "./saveNewsActions";
+import saveNews from "./saveNewsActions";
 
 describe("saveNewsActions", () => {
-  it("saveArticle", () => {
+  it("saveNews", () => {
     const payload = {
       articles: mockArticles,
     };
-    const action = saveArticle(payload);
+    const action = saveNews(payload);
     expect(action).toEqual({
       payload: payload,
-      type: "SAVE_ARTICLE",
+      type: "SAVE_NEWS",
     });
   });
 });

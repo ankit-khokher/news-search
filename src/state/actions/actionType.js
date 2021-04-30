@@ -1,3 +1,3 @@
-export const SAVE_ARTICLE = "SAVE_ARTICLE";
+const SAVE_NEWS = "SAVE_NEWS";
 
-export default SAVE_ARTICLE;
+export default SAVE_NEWS;

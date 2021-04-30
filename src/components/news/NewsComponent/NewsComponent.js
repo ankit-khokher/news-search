@@ -2,13 +2,13 @@ import SearchComponent from "../../common/SearchComponent/SearchComponent";
 import NewsItemCard from "../NewsItemCard/NewsItemCard";
 import "./NewsComponent.css";
 import { useSelector, useDispatch } from "react-redux";
-import { saveArticle } from "../../../state/actions/saveNewsActions";
 import { API_URL, SEARCH_QUERY_KEY } from "../../../util/AppConstants";
+import allActions from ".././../../state/actions/index";
 
 const NewsComponent = () => {
-  const dispatch = useDispatch();
   const articles = useSelector((state) => state.articles);
   const filteredArticles = articles ? articles.slice(0, 10) : [];
+  const dispatch = useDispatch();
 
   const getNews = (searchQuery) => {
     let result = fetch(
@@ -16,7 +16,7 @@ const NewsComponent = () => {
     )
       .then((response) => response.json())
       .then((result) => {
-        dispatch(saveArticle(result.articles));
+        dispatch(allActions.saveNewsActions(result.articles));
       });
     return result.articles;
   };
